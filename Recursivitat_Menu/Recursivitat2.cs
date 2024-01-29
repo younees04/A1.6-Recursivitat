@@ -135,5 +135,146 @@ namespace Recursivitat_Menu
             }
             return suma;
         }
+
+        // MOHA PARELLS
+        // 2.- Un número és primer si té estrictament dos divisors. Dissenyeu una funció que ens digui si un número és primer
+        public static bool EsPrimer(int numero)
+        {
+            bool esPrimer = false;
+
+            if (numero <= 1)
+            {
+                esPrimer = false;
+            }
+
+            int cantidadDivisores = 0;
+
+            for (int i = 1; i <= numero; i++)
+            {
+                if (numero % i == 0)
+                {
+                    cantidadDivisores++;
+                }
+
+                if (cantidadDivisores > 2)
+                {
+                    esPrimer = false;
+                }
+            }
+
+            esPrimer = cantidadDivisores == 2;
+            return esPrimer;
+        }
+
+        // 4.- Fer una funció que faci la divisió entera entre dos números 
+        public static int DivisioEntera(int dividendo, int divisor)
+        {
+            int res = 0;
+
+            if (dividendo >= divisor)
+            {
+                res = 1 + DivisioEntera(dividendo - divisor, divisor);
+            }
+
+            return res;
+        }
+
+        // 6.- Fer una funció que calculi el Màxim Comú Divisor de dos naturals. 
+        public static int MCD(int a, int b)
+        {
+            int res = 0;
+
+            if (a == b)
+            {
+                res = a;
+            }
+            else if (a > b)
+            {
+                res = MCD(a - b, b);
+            }
+            else
+            {
+                res = MCD(a, b - a);
+            }
+
+            return res;
+        }
+
+        // 8.- Fer una funció que retorni un enter que sigui la interpretació en base b d’un altre enter n entrat com a argument a la funció.
+        public static int InterpretarBase(int num, int basee)
+        {
+            int res = 0;
+
+            if (num == 0)
+            {
+                res = 0;
+            }
+            else
+            {
+                res = InterpretarBase(num / 10, basee) * basee + num % 10;
+            }
+
+            return res;
+        }
+
+
+        // 10.- Fer una funció que ens digui si un nombre está en base b.
+        public static bool EsBase(int num, int basee)
+        {
+            bool res;
+
+            if (num == 0)
+            {
+                res = true;
+            }
+
+            else if (num % 10 >= basee)
+            {
+                res = false;
+            }
+            else
+            {
+                res = EsBase(num / 10, basee);
+            }
+            return res;
+        }
+
+        // 12.- Fer una funció recursiva que donat un vector V d’enters, digui quina és la longitud del prefix més llarg que suma zero.Si no n’hi ha cap, la funció retornarà 0. S’entén per prefix qualsevol subvector de V que comenci per V[0]. 
+        public static int PrefixSumaZero(int[] vector, int posicio)
+        {
+            int res = 0;
+
+            if (vector[posicio] == 0)
+            {
+                res = 1 + PrefixSumaZero(vector, posicio + 1);
+            }
+
+            return res;
+        }
+
+        // 14.- Dissenyeu un algorisme recursiu que donats dos vectors d’enters ordenats creixentment, a[1:n] i b[1:m] amb n i m diferents, n ≥ 0 i m ≥ 0, que representen dos conjunts d’enters, decideixi si la seva intersecció és buida o no.
+        public static bool InterseccioBuida(int[] a, int[] b, int posA, int posB)
+        {
+            bool res = false;
+
+            if (posA == a.Length || posB == b.Length)
+            {
+                res = true;
+            }
+            else if (a[posA] == b[posB])
+            {
+                res = false;
+            }
+            else if (a[posA] < b[posB])
+            {
+                res = InterseccioBuida(a, b, posA + 1, posB);
+            }
+            else
+            {
+                res = InterseccioBuida(a, b, posA, posB + 1);
+            }
+
+            return res;
+        }
     }
 }
