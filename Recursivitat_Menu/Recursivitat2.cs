@@ -96,7 +96,7 @@ namespace Recursivitat_Menu
         //11
 
 
-        static bool EstaOrdenat(int[] vector, int n, bool creixent, int index = 0)
+        public static bool EstaOrdenat(int[] vector, int n, bool creixent, int index = 0)
         {
             if (n <= 1 || index == n - 1)
             {
