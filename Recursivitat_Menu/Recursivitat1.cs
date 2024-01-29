@@ -58,6 +58,23 @@ namespace Recursivitat_Menu
             return resultat;
         }
 
+        // 4
+        public static int DivisioEntera(int num1, int num2)
+        {
+            int quocient = 0;
+            if (num1 < num2)
+            {
+                quocient = 0;
+            }
+
+            else
+            {
+                quocient = 1 + DivisioEntera(num1 - num2, num2);
+            }
+
+            return quocient;
+        }
+
         //5
 
         public static int Modul(int a, int b)
