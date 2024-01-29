@@ -6,11 +6,11 @@
         {
             while (true)
             {
-                Console.WriteLine("Selecciona una lista de funciones:");
+                Console.WriteLine("Selecciona una llista de funcions:");
                 Console.WriteLine("1. Recursivitat1");
                 Console.WriteLine("2. Recursivitat2");
                 Console.WriteLine("3. Recursivitat3");
-                Console.WriteLine("0. Salir");
+                Console.WriteLine("0. Sortir");
 
                 string input = Console.ReadLine();
 
@@ -28,7 +28,7 @@
                     case "0":
                         return; // Surt del programa
                     default:
-                        Console.WriteLine("Opción no válida.");
+                        Console.WriteLine("Opció no válida.");
                         break;
                 }
             }
@@ -36,7 +36,7 @@
 
         static void ShowRecursivitat1Menu()
         {
-            Console.WriteLine("Selecciona un método de Recursivitat1:");
+            Console.WriteLine("Selecciona un metode de Recursivitat1:");
             Console.WriteLine("1. SumaDigits");
             Console.WriteLine("2. SumaProducteAmbSumes");
             // Añade aquí los demás métodos de Recursivitat1
@@ -53,18 +53,18 @@
                     break;
                 // Añade aquí los demás casos para cada método de Recursivitat1
                 default:
-                    Console.WriteLine("Opción no válida.");
+                    Console.WriteLine("Opció no valida.");
                     break;
             }
         }
 
         static void ShowRecursivitat2Menu()
         {
-            Console.WriteLine("Selecciona un método de Recursivitat2:");
+            Console.WriteLine("Selecciona un metode de Recursivitat2:");
             Console.WriteLine("1. FibonacciLineal");
             Console.WriteLine("2. EsTriangular");
             // Añade aquí los demás métodos de Recursivitat2
-            Console.Write("Ingrese el número del método (1-2): ");
+            Console.Write("Ingresa el número del metode (1-2): ");
 
             string input = Console.ReadLine();
             switch (input)
@@ -77,7 +77,7 @@
                     break;
                 // Añade aquí los demás casos para cada método de Recursivitat2
                 default:
-                    Console.WriteLine("Opción no válida.");
+                    Console.WriteLine("Opció no valida.");
                     break;
             }
         }
@@ -87,17 +87,17 @@
             Console.WriteLine("Selecciona un metode de Recursivitat3:");
             Console.WriteLine("1. Permutacions");
             // Añade aquí los demás métodos de Recursivitat3
-            Console.Write("Ingrese el número del método (1): ");
+            Console.Write("Ingresa el número del método (1-2): ");
 
             string input = Console.ReadLine();
             switch (input)
             {
                 case "1":
-                    Console.WriteLine(string.Join("\n", Recursivitat3.Permutacions("ABCD")));
+                    Console.WriteLine(Recursivitat3.Permutacions("ABCD"));
                     break;
                 // Añade aquí los demás casos para cada método de Recursivitat3
                 default:
-                    Console.WriteLine("Opción no válida.");
+                    Console.WriteLine("Opció no valida");
                     break;
             }
         }
