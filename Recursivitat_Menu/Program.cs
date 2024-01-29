@@ -58,6 +58,8 @@
             }
         }
 
+        // Resto de la clase Recursivitat2
+
         static void ShowRecursivitat2Menu()
         {
             Console.WriteLine("Selecciona un metode de Recursivitat2:");
@@ -245,6 +247,9 @@
             }
 
         }
+
+
+
 
         static void ShowRecursivitat3Menu()
         {
