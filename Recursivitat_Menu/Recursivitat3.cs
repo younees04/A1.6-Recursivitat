@@ -31,5 +31,25 @@ namespace Recursivitat_Menu
             }
             return result;
         }
+
+        // MOHA
+        public static int MultiplicacioRussa(int a, int b)
+        {
+            int res = 0;
+
+            if (a > 0)
+            {
+                if (a % 2 != 0)
+                {
+                    res = b + MultiplicacioRussa(a / 2, b * 2);
+                }
+                else
+                {
+                    res = MultiplicacioRussa(a / 2, b * 2);
+                }
+            }
+
+            return res;
+        }
     }
 }
