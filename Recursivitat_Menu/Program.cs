@@ -36,24 +36,84 @@
 
         static void ShowRecursivitat1Menu()
         {
-            Console.WriteLine("Selecciona un metode de Recursivitat1:");
+            Console.WriteLine("Selecciona un mètode de Recursivitat1:");
             Console.WriteLine("1. SumaDigits");
             Console.WriteLine("2. SumaProducteAmbSumes");
-            // Añade aquí los demás métodos de Recursivitat1
-            Console.Write("Ingrese el número del método (1-2): ");
+            Console.WriteLine("3. Potència");
+            Console.WriteLine("4. Modul");
+            Console.WriteLine("5. Fibonacci");
+            Console.WriteLine("6. ComptarXifres");
+            Console.WriteLine("7. DivisióEntera");
+            Console.WriteLine("8. ValorMàxim");
+            Console.WriteLine("9. TrobaPosició");
+            Console.WriteLine("10. EsBase");
+            Console.Write("Introdueix el número del mètode (1-10): ");
 
             string input = Console.ReadLine();
             switch (input)
             {
                 case "1":
-                    Console.WriteLine(Recursivitat1.SumaDigits(11111));
+                    Console.Write("Introdueix el número per a SumaDigits: ");
+                    int num1 = int.Parse(Console.ReadLine());
+                    Console.WriteLine(Recursivitat1.SumaDigits(num1));
                     break;
                 case "2":
-                    Console.WriteLine(Recursivitat1.SumaProducteAmbSumes(2, 3));
+                    Console.Write("Introdueix el primer número per a SumaProducteAmbSumes: ");
+                    int num2 = int.Parse(Console.ReadLine());
+                    Console.Write("Introdueix el segon número per a SumaProducteAmbSumes: ");
+                    int num3 = int.Parse(Console.ReadLine());
+                    Console.WriteLine(Recursivitat1.SumaProducteAmbSumes(num2, num3));
                     break;
-                // Añade aquí los demás casos para cada método de Recursivitat1
+                case "3":
+                    Console.Write("Introdueix el número base per a Potència: ");
+                    int num4 = int.Parse(Console.ReadLine());
+                    Console.Write("Introdueix l'exponent per a Potència: ");
+                    int num5 = int.Parse(Console.ReadLine());
+                    Console.WriteLine(Recursivitat1.Potencia(num4, num5));
+                    break;
+                case "4":
+                    Console.Write("Introdueix el primer número per a Modul: ");
+                    int num6 = int.Parse(Console.ReadLine());
+                    Console.Write("Introdueix el segon número per a Modul: ");
+                    int num7 = int.Parse(Console.ReadLine());
+                    Console.WriteLine(Recursivitat1.Modul(num6, num7));
+                    break;
+                case "5":
+                    Console.Write("Introdueix el número per a Fibonacci: ");
+                    int num8 = int.Parse(Console.ReadLine());
+                    Console.WriteLine(Recursivitat1.Fibonacci(num8));
+                    break;
+                case "6":
+                    Console.Write("Introdueix el número per a ComptarXifres: ");
+                    int num9 = int.Parse(Console.ReadLine());
+                    Console.WriteLine(Recursivitat1.ComptarXifres(num9));
+                    break;
+                case "7":
+                    Console.Write("Introdueix el primer número per a DivisióEntera: ");
+                    int num10 = int.Parse(Console.ReadLine());
+                    Console.Write("Introdueix el segon número per a DivisióEntera: ");
+                    int num11 = int.Parse(Console.ReadLine());
+                    Console.WriteLine(Recursivitat1.DivisioEntera(num10, num11));
+                    break;
+                case "8":
+                    int[] vector = { 10, 5, 8, 20 };
+                    Console.WriteLine(Recursivitat1.ValorMaxim(vector, vector.Length - 1));
+                    break;
+                case "9":
+                    int[] array = { 10, 20, 30, 40, 50 };
+                    Console.Write("Introdueix el valor a buscar en TrobaPosició: ");
+                    int valor = int.Parse(Console.ReadLine());
+                    Console.WriteLine(Recursivitat1.TrobaPosicio(array, valor, array.Length - 1));
+                    break;
+                case "10":
+                    Console.Write("Introdueix el número per a EsBase: ");
+                    int num12 = int.Parse(Console.ReadLine());
+                    Console.Write("Introdueix la base per a EsBase: ");
+                    int baseNum = int.Parse(Console.ReadLine());
+                    Console.WriteLine(Recursivitat1.EsBase(num12, baseNum));
+                    break;
                 default:
-                    Console.WriteLine("Opció no valida.");
+                    Console.WriteLine("Opció no vàlida.");
                     break;
             }
         }
